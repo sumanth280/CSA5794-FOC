@@ -1,0 +1,15 @@
+echo "Enter the value of x:"
+read x
+
+echo "Enter the number of terms:"
+read n
+
+result=1
+term=1
+
+for ((i=1; i<=n; i++)); do
+    term=$(echo "scale=5; $term * $x / $i" | bc)
+    result=$(echo "scale=5; $result + $term" | bc)
+done
+
+echo "Exponential series result: $result"

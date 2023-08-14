@@ -1,0 +1,24 @@
+echo "Enter the number of elements in the array:"
+read n
+
+echo "Enter the elements of the array:"
+for ((i=0; i<n; i++)); do
+    read arr[$i]
+done
+
+echo "Enter the element to search for:"
+read search
+
+found=0
+
+for ((i=0; i<n; i++)); do
+    if [ "${arr[$i]}" -eq "$search" ]; then
+        echo "Element $search found at index $i."
+        found=1
+        break
+    fi
+done
+
+if [ "$found" -eq 0 ]; then
+    echo "Element $search not found in the array."
+fi

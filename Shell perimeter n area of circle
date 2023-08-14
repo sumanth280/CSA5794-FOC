@@ -1,0 +1,10 @@
+
+echo "Enter the radius of the circle:"
+read radius
+
+# Calculate perimeter and area
+perimeter=$(echo "2 * 3.14159 * $radius" | bc)
+area=$(echo "3.14159 * $radius * $radius" | bc)
+
+echo "Perimeter of the circle: $perimeter"
+echo "Area of the circle: $area"

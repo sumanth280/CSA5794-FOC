@@ -1,0 +1,14 @@
+
+echo "Enter the number of elements:"
+read n
+
+sum=0
+
+for ((i=1; i<=n; i++)); do
+    echo "Enter number $i:"
+    read num
+    cube=$((num * num * num))
+    sum=$((sum + cube))
+done
+
+echo "Sum of the cubes: $sum"

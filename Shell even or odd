@@ -1,0 +1,8 @@
+echo "Enter an integer:"
+read num
+
+if [ $((num % 2)) -eq 0 ]; then
+    echo "The integer is even."
+else
+    echo "The integer is odd."
+fi

@@ -1,0 +1,22 @@
+echo "Enter a number:"
+read num
+
+is_power_of_two=0
+temp=$num
+
+while [ $temp -gt 1 ]; do
+    if [ $((temp % 2)) -ne 0 ]; then
+        break
+    fi
+    temp=$((temp / 2))
+done
+
+if [ $temp -eq 1 ]; then
+    is_power_of_two=1
+fi
+
+if [ $is_power_of_two -eq 1 ]; then
+    echo "$num can be expressed as 2^$((num-1))"
+else
+    echo "$num cannot be expressed as a power of 2"
+fi

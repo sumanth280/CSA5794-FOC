@@ -1,0 +1,13 @@
+
+echo "Enter the number of elements:"
+read n
+
+echo "Enter the elements:"
+for ((i=0; i<n; i++)); do
+    read array[$i]
+done
+
+echo "Array elements in reverse order:"
+for ((i=n-1; i>=0; i--)); do
+    echo "${array[$i]}"
+done

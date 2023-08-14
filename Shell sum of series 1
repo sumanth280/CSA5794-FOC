@@ -1,0 +1,14 @@
+
+echo "Enter a value for N:"
+read N
+
+sum=0
+sign=1
+
+for ((i=1; i<=N; i++)); do
+    term=$((i * sign))
+    sum=$((sum + term))
+    sign=$((sign * -1))
+done
+
+echo "Sum of the series 1 - 2 + 3 - 4 + 5 - ... + $N is $sum"

@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    float r, p, a;
+    const float PI = 3.14159;
+
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &r);
+
+    p = 2 * PI * r;
+    a = PI * r * r;
+
+    printf("Perimeter: %f\n", p);
+    printf("Area: %f\n", a);
+
+    return 0;
+}

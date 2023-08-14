@@ -1,0 +1,11 @@
+echo "Enter a value for n:"
+read n
+
+sum=0
+
+for ((i=1; i<=n; i++)); do
+    power=$((i * i))
+    sum=$((sum + power))
+done
+
+echo "Sum of the series 1^2 + 2^2 + 3^2 + ... + $n^2 is $sum"

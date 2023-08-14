@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Enter an integer:"
+read num
+if [ $num -lt 0 ]; then
+    num=$((num * -1))
+fi
+num_of_digits=${#num}
+
+echo "Total number of digits: $num_of_digits"

@@ -1,0 +1,10 @@
+
+
+echo "Enter the elements separated by spaces:"
+read -a array
+
+
+unique_array=($(echo "${array[@]}" | tr ' ' '\n' | sort -u))
+
+echo "Array after removing duplicates:"
+echo "${unique_array[@]}"

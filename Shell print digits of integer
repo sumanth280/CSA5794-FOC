@@ -1,0 +1,10 @@
+echo "Enter an integer:"
+read num
+
+echo "Digits of the integer:"
+
+while [ $num -gt 0 ]; do
+    digit=$((num % 10))
+    echo "$digit"
+    num=$((num / 10))
+done

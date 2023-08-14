@@ -1,0 +1,22 @@
+echo "Enter the lengths of three sides:"
+read side1 side2 side3
+
+if [ $(echo "$side1 + $side2 > $side3" | bc -l) -eq 1 ] && [ $(echo "$side2 + $side3 > $side1" | bc -l) -eq 1 ] && [ $(echo "$side1 + $side3 > $side2" | bc -l) -eq 1 ]; then
+    if [ "$side1" = "$side2" ] && [ "$side2" = "$side3" ]; then
+        echo "Equilateral Triangle"
+    elif [ "$side1" = "$side2" ] || [ "$side2" = "$side3" ] || [ "$side1" = "$side3" ]; then
+        echo "Isosceles Triangle"
+    else
+        a_square=$(echo "$side1 * $side1" | bc -l)
+        b_square=$(echo "$side2 * $side2" | bc -l)
+        c_square=$(echo "$side3 * $side3" | bc -l)
+
+        if [ $(echo "$a_square + $b_square == $c_square" | bc -l) -eq 1 ] || [ $(echo "$a_square + $c_square == $b_square" | bc -l) -eq 1 ] || [ $(echo "$b_square + $c_square == $a_square" | bc -l) -eq 1 ]; then
+            echo "Right-angle Triangle"
+        else
+            echo "Scalene Triangle"
+        fi
+    fi
+else
+    echo "This Triangle is NOT possible."
+fi

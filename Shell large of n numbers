@@ -1,0 +1,15 @@
+echo "Enter the number of integers:"
+read n
+
+max=0
+
+for ((i=1; i<=n; i++)); do
+    echo "Enter integer $i:"
+    read num
+
+    if [ $num -gt $max ]; then
+        max=$num
+    fi
+done
+
+echo "The largest number is: $max"

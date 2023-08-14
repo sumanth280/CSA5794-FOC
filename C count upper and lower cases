@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int uppercaseCount = 0, lowercaseCount = 0, i;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    for (i = 0; i < strlen(str); i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            uppercaseCount++;
+        } else if (str[i] >= 'a' && str[i] <= 'z') {
+            lowercaseCount++;
+        }
+    }
+
+    printf("Number of uppercase letters: %d\n", uppercaseCount);
+    printf("Number of lowercase letters: %d\n", lowercaseCount);
+
+    return 0;
+}

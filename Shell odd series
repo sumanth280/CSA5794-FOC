@@ -1,0 +1,9 @@
+
+echo "Enter a number (N):"
+read n
+
+echo "Odd number series:"
+for ((i=1; i<=n; i+=2)); do
+    echo -n "$i "
+done
+echo

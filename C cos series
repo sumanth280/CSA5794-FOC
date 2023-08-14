@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    double x;
+    
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+    
+    printf("Enter the number of terms (n): ");
+    scanf("%d", &n);
+    
+    double sum = 1.0; 
+    
+    for (int i = 1; i <= n; i++) {
+        double term = pow(-1, i) * pow(x, 2 * i) / tgamma(2 * i + 1);
+        sum += term;
+    }
+    
+    printf("Cosine of %lf is approximately: %lf\n", x, sum);
+    
+    return 0;
+}

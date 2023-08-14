@@ -1,0 +1,15 @@
+echo "Enter the number of elements:"
+read n
+
+sum=0
+
+for ((i=1; i<=n; i++)); do
+    echo "Enter number $i:"
+    read num
+    if [ $((num % 2)) -ne 0 ]; then
+        square=$((num * num))
+        sum=$((sum + square))
+    fi
+done
+
+echo "Sum of the squares of odd numbers: $sum"

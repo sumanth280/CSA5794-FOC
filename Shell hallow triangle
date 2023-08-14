@@ -1,0 +1,17 @@
+
+echo "Enter the number of rows:"
+read rows
+
+echo "Enter the number of columns:"
+read columns
+
+for ((i=1; i<=rows; i++)); do
+    for ((j=1; j<=columns; j++)); do
+        if [ $i -eq 1 ] || [ $i -eq $rows ] || [ $j -eq 1 ] || [ $j -eq $columns ]; then
+            echo -n "*"
+        else
+            echo -n " "
+        fi
+    done
+    echo
+done

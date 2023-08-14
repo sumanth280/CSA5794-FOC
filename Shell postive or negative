@@ -1,0 +1,10 @@
+echo "Enter an integer:"
+read num
+
+if [ $num -gt 0 ]; then
+    echo "The integer is positive."
+elif [ $num -lt 0 ]; then
+    echo "The integer is negative."
+else
+    echo "The integer is zero."
+fi
