@@ -1,0 +1,17 @@
+echo "enter the principal amount"
+read p
+echo "enter the year"
+read y
+echo "enter 1 for senior citizen \n 0 for others"
+read c
+if((c==1))
+then
+interest=$((p*y*12/100))
+echo $"the simple interest is:"$interest
+elif((c==0))
+then
+interest=$((p*y*10/100))
+echo $"the simple interest is:"$interest
+else
+echo "invalid"
+fi

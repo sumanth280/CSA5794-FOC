@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main()
+{
+	int r1,c1r2,c2,m1[100][100],m2[100][100],r[100][100],i,j,k;
+	printf("enter first matrix rows and columns and second mat columns:");
+	scanf("%d %d %d",&r1,&c1r2,&c2);
+	printf("mat1");
+	for(i=0;i<r1;i++)
+	{
+		for(j=0;j<c1r2;j++)
+		{
+			scanf("%d",&m1[i][j]);
+		}
+	}	
+	printf("mat2");
+	for(i=0;i<c1r2;i++)
+	{
+		for(j=0;j<c2;j++)
+		{
+			scanf("%d",&m2[i][j]);
+		}
+	}
+	printf("resultant matrix:\n");
+	for(i=0;i<r1;i++)
+	{
+		for(j=0;j<c2;j++)
+		{
+			r[i][j]=0;
+			for(k=0;k<c1r2;k++)
+			{
+					r[i][j]+=m1[i][k]*m2[k][j];
+			}
+		}
+	}
+	for(i=0;i<r1;i++)
+	{
+		for(j=0;j<c2;j++)
+		{
+			printf("%d\t",r[i][j]);
+		}
+		printf("\n");
+	}
+}
